@@ -58,11 +58,19 @@ header div ul {
 	margin-top: 0;
 	margin-bottom: 0;
 	margin-left: -10px;
+	align-items: center;
 }
 
 header div ul li {
 	display: list-item;
 	margin-left: 10px;
+}
+
+.headerNavLink {
+	padding-left: 8px;
+	padding-right: 8px;
+	text-decoration: none;
+	color: rgba(244, 244, 244, 0.7);
 }
 
 .hedgeform {
