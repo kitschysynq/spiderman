@@ -108,3 +108,53 @@ header div ul li {
 	padding: 16px;
 	font-size: 14px;
 }
+
+.title-pane {
+	background-color: #F4F4F4;
+	padding-top: 12px;
+	padding-bottom: 0;
+	margin-left: 0px;
+	margin-right: 0px;
+	border-bottom: 1px solid #474744
+}
+
+.post-title {
+	background-color: #F4F4F4;
+	justify-content: space-between;
+}
+
+.content-title {
+	display: flex;
+	flex: 1 1 auto;
+}
+
+.content-title-buttons {
+	display: flex;
+	margin-left: auto;
+}
+
+.tabs-list {
+	display: flex;
+	list-style: none;
+	padding-left: 8px;
+	margin-top: 0;
+	margin-bottom: 0;
+	margin-left: -10px;
+	align-items: center;
+}
+
+.tab {
+	display: inline;
+	margin-left: 10px;
+	padding: 4px 8px 0px 8px;
+	margin-bottom: -2px;
+}
+
+.tab.active {
+	border-top: 2px solid #FF5722;
+	border-left: 1px solid #474744;
+	border-right: 1px solid #474744;
+	border-bottom: 2px solid white;
+	background-color: white;
+}
+
