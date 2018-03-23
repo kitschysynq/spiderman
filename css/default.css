@@ -115,7 +115,7 @@ header div ul li {
 	padding-bottom: 0;
 	margin-left: 0px;
 	margin-right: 0px;
-	border-bottom: 1px solid #474744
+	border-bottom: 1px solid rgba(71, 71, 68, 0.2);
 }
 
 .post-title {
@@ -152,8 +152,8 @@ header div ul li {
 
 .tab.active {
 	border-top: 2px solid #FF5722;
-	border-left: 1px solid #474744;
-	border-right: 1px solid #474744;
+	border-left: 1px solid rgba(71, 71, 68, 0.2);
+	border-right: 1px solid rgba(71, 71, 68, 0.2);
 	border-bottom: 2px solid white;
 	background-color: white;
 }
