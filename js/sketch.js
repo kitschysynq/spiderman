@@ -15,9 +15,9 @@ function setup() {
 	thetaStep = (Math.PI / n);
 	thetaOffset = (3 * Math.PI) / 4;
 
-	slider = createSlider(-thetaStep, (2 * Math.PI) + thetaStep, -thetaStep, 0.0001);
+	slider = createSlider(-thetaStep, (2 * Math.PI) - thetaStep, -thetaStep, 0.00001);
 	slider.position(20, 20);
-	thetaOffsetSlider = createSlider(0, (2 * Math.PI), 0, 0.0001);
+	thetaOffsetSlider = createSlider(0, (2 * Math.PI), (Math.PI / 2), 0.00001);
 	thetaOffsetSlider.position(20, 50);
 }
 
