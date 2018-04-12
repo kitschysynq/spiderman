@@ -29,6 +29,13 @@ function draw() {
 	noStroke();
 	fill(200);
 	thetaOffset = thetaOffsetSlider.value();
+	var x1 = (r - minorR) * cos(slider.value() + thetaOffset);
+	var y1 = (r - minorR) * sin(slider.value() + thetaOffset);
+	var x2 = (r + minorR) * cos(slider.value() + thetaOffset);
+	var y2 = (r + minorR) * sin(slider.value() + thetaOffset);
+	stroke(128);
+	line(x1, y1, x2, y2);
+	noStroke();
 	for(count = 0; count < n; count++) {
 		var theta = 2 * thetaStep * count;
 		var x = r * cos(theta + thetaOffset);
