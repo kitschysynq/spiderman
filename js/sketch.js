@@ -24,7 +24,7 @@ function draw() {
 	noStroke();
 	fill(200);
 	for(count = 0; count < n; count++) {
-		var theta = thetaStep * count;
+		var theta = 2 * thetaStep * count;
 		var x = r * cos(theta);
 		var y = r * sin(theta);
 		var fillColor = (Math.tanh((slider.value() - theta - thetaStep) / thetaStep) + 1) * 128;
