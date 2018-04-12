@@ -25,7 +25,7 @@ function draw() {
 		var x = r * cos(theta);
 		var y = r * sin(theta);
 		var sliderRad = (slider.value() / 180) * Math.PI;
-		var fillColor = (Math.tanh((theta - sliderRad) / minorR) + 1) * 128;
+		var fillColor = (Math.tanh((sliderRad - theta) / minorR) + 1) * 128;
 		fill(fillColor);
 		ellipse(x, y, minorR, minorR);
 	}
