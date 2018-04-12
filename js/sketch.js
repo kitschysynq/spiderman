@@ -25,8 +25,8 @@ function draw() {
 	fill(200);
 	for(count = 0; count < n; count++) {
 		var theta = 2 * thetaStep * count;
-		var x = r * cos(theta);
-		var y = r * sin(theta);
+		var x = r * cos(theta + (Math.PI / 4));
+		var y = r * sin(theta + (Math.PI / 4));
 		var fillColor = (Math.tanh((slider.value() - theta) / thetaStep) + 1) * 128;
 		fill(fillColor);
 		ellipse(x, y, minorR, minorR);
