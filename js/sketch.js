@@ -4,6 +4,7 @@ var minorR;
 var slider;
 var thetaStep;
 var thetaOffset;
+var thetaOffsetSlider;
 
 function setup() {
 	createCanvas(640, 480);
@@ -14,8 +15,10 @@ function setup() {
 	thetaStep = (Math.PI / n);
 	thetaOffset = (3 * Math.PI) / 4;
 
-	slider = createSlider(-thetaStep, (2 * Math.PI) + thetaStep, 0, 0.0001);
+	slider = createSlider(-thetaStep, (2 * Math.PI) + thetaStep, -thetaStep, 0.0001);
 	slider.position(20, 20);
+	thetaOffsetSlider = createSlider(0, (2 * Math.PI), 0, 0.0001);
+	thetaOffsetSlider.position(20, 50);
 }
 
 function draw() {
@@ -25,6 +28,7 @@ function draw() {
 	ellipseMode(CENTER);
 	noStroke();
 	fill(200);
+	thetaOffset = thetaOffsetSlider.value();
 	for(count = 0; count < n; count++) {
 		var theta = 2 * thetaStep * count;
 		var x = r * cos(theta + thetaOffset);
