@@ -12,7 +12,7 @@ function setup() {
 	// thetaStep is half the delta of theta from the center of a detent
 	thetaStep = (Math.PI / n);
 
-	slider = createSlider(0, 2 * Math.PI, 0, 0.001);
+	slider = createSlider(-thetaStep, (2 * Math.PI) + thetaStep, 0, 0.0001);
 	slider.position(20, 20);
 }
 
@@ -27,7 +27,7 @@ function draw() {
 		var theta = 2 * thetaStep * count;
 		var x = r * cos(theta);
 		var y = r * sin(theta);
-		var fillColor = (Math.tanh((slider.value() - theta - thetaStep) / thetaStep) + 1) * 128;
+		var fillColor = (Math.tanh((slider.value() - theta) / thetaStep) + 1) * 128;
 		fill(fillColor);
 		ellipse(x, y, minorR, minorR);
 	}
