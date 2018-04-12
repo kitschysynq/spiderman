@@ -11,7 +11,7 @@ function setup() {
 	minorR = ((2 * Math.PI * r) / n) * 0.8;
 	thetaStep = ((2 * Math.PI) / n);
 
-	slider = createSlider(0, 2 * Math.PI, 0);
+	slider = createSlider(0, 2 * Math.PI, 0, 0.001);
 	slider.position(20, 20);
 }
 
