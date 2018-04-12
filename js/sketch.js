@@ -21,7 +21,7 @@ function draw() {
 	noStroke();
 	fill(200);
 	for(count = 0; count < n; count++) {
-		theta = ((2 * Math.PI) / n) * count;
+		var theta = ((2 * Math.PI) / n) * count;
 		var x = r * cos(theta);
 		var y = r * sin(theta);
 		var sliderRad = (slider.value() / 180) * Math.PI;
