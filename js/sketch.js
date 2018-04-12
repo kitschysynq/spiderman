@@ -3,6 +3,7 @@ var n;
 var minorR;
 var slider;
 var thetaStep;
+var thetaOffset;
 
 function setup() {
 	createCanvas(640, 480);
@@ -11,6 +12,7 @@ function setup() {
 	minorR = ((2 * Math.PI * r) / n) * 0.8;
 	// thetaStep is half the delta of theta from the center of a detent
 	thetaStep = (Math.PI / n);
+	thetaOffset = (3 * Math.PI) / 4;
 
 	slider = createSlider(-thetaStep, (2 * Math.PI) + thetaStep, 0, 0.0001);
 	slider.position(20, 20);
@@ -25,8 +27,8 @@ function draw() {
 	fill(200);
 	for(count = 0; count < n; count++) {
 		var theta = 2 * thetaStep * count;
-		var x = r * cos(theta + (Math.PI / 4));
-		var y = r * sin(theta + (Math.PI / 4));
+		var x = r * cos(theta + thetaOffset);
+		var y = r * sin(theta + thetaOffset);
 		var fillColor = (Math.tanh((slider.value() - theta) / thetaStep) + 1) * 128;
 		fill(fillColor);
 		ellipse(x, y, minorR, minorR);
