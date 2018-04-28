@@ -12,10 +12,10 @@ function setup() {
 	ygrid = height / gridSize;
 	xbox = xgrid * aspectRatio;
 	ybox = ygrid * aspectRatio;
-	frameRate(10);
 }
 
 function draw() {
+	clear();
 	for(let i = 0; i < gridSize; i++) {
 		for(let j = 0; j < gridSize; j++) {
 			fill((1 - grid[i][j]) * 255);
